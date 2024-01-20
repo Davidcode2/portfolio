@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +11,25 @@ import { HeroComponent } from './components/hero/hero.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'fe';
+
+  ngOnInit() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const square = entry.target.querySelector('.onScroll')!;
+
+        if (entry.isIntersecting) {
+          square.classList.add('slide-in');
+          return; // if we added the class, exit the function
+        }
+
+        // We're not intersecting, so remove the class!
+        square.classList.remove('slide-in');
+      });
+    });
+
+    observer.observe(document.querySelector('.slide-wrapper')!);
+  }
 }
+

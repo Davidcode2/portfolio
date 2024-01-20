@@ -76,11 +76,11 @@
 
 .blob-orange {
   position: absolute;
-  overflow: hidden;
-  right: 0;
-  top: 300px;
   width: 600px;
   height: 500px;
+  overflow: hidden;
+  right: 100px;
+  top: 300px;
   background: linear-gradient(
     180deg,
     rgba(209, 0, 104,0.82) 31.77%,

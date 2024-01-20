@@ -1,0 +1,143 @@
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+}
+
+.occupation {
+  grid-area: occupation;
+}
+
+.name {
+  grid-area: name;
+  justify-self: center;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.icon {
+  grid-area: icon;
+  justify-self: center;
+}
+
+.container {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.transparent {
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 11, 18, 105, 0.17 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  color: whitesmoke;
+}
+
+.card {
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: whitesmoke;
+}
+
+.blob-blue {
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255,0.42) 31.77%,
+    #5c9df1 100%
+  );
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move-blue 25s infinite alternate;
+          animation: move-blue 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob-orange {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 300px;
+  width: 600px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(209, 0, 104,0.82) 31.77%,
+    #ff8ff1 100%
+  );
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move-orange 25s infinite alternate;
+          animation: move-orange 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob-orange:hover {
+  width: 620px;
+  height: 520px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #fa709a,
+    inset 200px 200px 0 0px #fb86c5,
+    inset 300px 300px 0 0px #184ba8;
+}
+
+.blob-blue:hover {
+  width: 520px;
+  height: 720px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #fa709a,
+    inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+}
+
+@keyframes move-blue {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(200px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move-orange {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(50px, -100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}

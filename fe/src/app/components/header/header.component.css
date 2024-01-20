@@ -1,0 +1,17 @@
+.slide-in {
+  animation: 3.5s ease-in-out 0s 1 slidein
+}
+
+@keyframes slidein {
+  0% {
+    opacity:0;
+  }
+  80% {
+    transform: translateY(-5rem);
+    opacity:0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity:1;
+  }
+}

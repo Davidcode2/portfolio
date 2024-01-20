@@ -1,0 +1,32 @@
+.slide-in {
+  animation: 2.5s ease-in-out 0s 1 slidein
+}
+
+.transparent {
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 11, 18, 105, 0.17 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  color: whitesmoke;
+}
+
+.container {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateY(5rem);
+    opacity:0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity:1;
+  }
+}

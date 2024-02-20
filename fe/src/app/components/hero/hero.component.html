@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container mx-auto">
   <div
-      class="card slide-in transparent z-30 justify-center self-center p-20 border border-stone-800 rounded-lg bg-gradient-to-tr from-stone-800 to-stone-950 shadow:md shadow-emerald-500"
-      >
-      <h2 class="name text-2xl text-stone-200 font-bold">
-        Jakob Lingel
-      </h2>
-    <h3 class="occupation text-5xl font-extrabold text-stone-100">
-      Fullstack Software Developer
+    class="slide-in grid grid-cols-3 transparent z-30 self-center p-40 border border-stone-800 rounded-lg bg-gradient-to-tr from-stone-800 to-stone-950 shadow:md shadow-emerald-500"
+  >
+    <h2 class="row-start-1 text-2xl text-stone-200 font-bold">Jakob Lingel</h2>
+    <h3
+      class="row-start-2 col-span-full text-5xl font-extrabold text-stone-100"
+    >
+      {{ '{' + '&nbsp;Fullstack&nbsp;Software&nbsp;Developer&nbsp;' + '}' }}
     </h3>
     <div id="displayWord" class="text-stone-200 font-semibold">
-       {{ typeWord }}
+      {{ typeWord }}
     </div>
   </div>
 </div>

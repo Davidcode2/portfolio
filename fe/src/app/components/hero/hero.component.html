@@ -3,9 +3,9 @@
     class="slide-in transparent shadow:md z-30 self-center rounded-lg border border-stone-800 bg-gradient-to-tr from-stone-800 to-stone-950 shadow-emerald-500"
   >
     <div class="flex gap-2 p-2">
-      <div class="w-2 rounded-full bg-red-500/70 p-2"></div>
-      <div class="w-2 rounded-full bg-yellow-500/70 p-2"></div>
-      <div class="w-2 rounded-full bg-green-600/70 p-2"></div>
+      <div (click)="shrink()" class="w-2 cursor-pointer rounded-full bg-red-500/70 p-2"></div>
+      <div (click)="shrink()" class="w-2 cursor-pointer rounded-full bg-yellow-500/70 p-2"></div>
+      <div (click)="grow()" class="w-2 cursor-pointer rounded-full bg-green-600/70 p-2"></div>
     </div>
     <div class="grid grid-cols-3 gap-8 p-40">
       <h2
@@ -25,9 +25,7 @@
           width="40"
           alt=""
         />
-        <div id="displayWord" class="text-2xl text-stone-200">
-          {{ typeWord }}<span class="blink">{{ cursor }}</span>
-        </div>
+        <app-text-writer></app-text-writer>
       </div>
     </div>
   </div>

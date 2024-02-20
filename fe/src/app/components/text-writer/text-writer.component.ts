@@ -19,12 +19,17 @@ export class TextWriterComponent {
     }, 3000);
   }
 
+  public async restart() {
+    await this.removeLetters(0);
+    this.makeWords();
+  }
+
   private async makeWords() {
     for (let [i, word] of this.words.entries()) {
       let letters: string[] = word.split('');
       await this.addLetters(letters);
       if (i < this.words.length - 1) {
-        await this.removeLetters();
+        await this.removeLetters(2000);
       }
     }
   }
@@ -44,7 +49,7 @@ export class TextWriterComponent {
     });
   }
 
-  private removeLetters() {
+  private removeLetters(delay: number) {
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log('remove');
@@ -61,7 +66,7 @@ export class TextWriterComponent {
             resolve('blub');
           }
         }, 100);
-      }, 2000);
+      }, delay);
     });
   }
 

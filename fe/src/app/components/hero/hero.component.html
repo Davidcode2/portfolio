@@ -1,18 +1,24 @@
 <div class="container mx-auto">
-  <div id="hero"
-      class="slide-in transition:all duration-300 transparent shadow:md z-30 self-center rounded-lg border border-stone-800 bg-gradient-to-tr from-stone-800 to-stone-950 shadow-emerald-500"
+  <div
+    id="hero"
+    class="slide-in transition:all transparent shadow:md z-30 self-center rounded-lg border border-stone-800 bg-gradient-to-tr from-stone-800 to-stone-950 shadow-emerald-500 duration-300"
   >
-    <div class="flex gap-2 p-2">
-      <div (click)="shrink()" class="w-2 cursor-pointer rounded-full bg-red-500/70 p-2"></div>
-      <div (click)="shrink()" class="w-2 cursor-pointer rounded-full bg-yellow-500/70 p-2"></div>
-      <div (click)="grow()" class="w-2 cursor-pointer rounded-full bg-green-600/70 p-2"></div>
-    </div>
+  <app-window-buttons [window]="heroElement"></app-window-buttons>
     <div class="grid grid-cols-3 gap-8 p-40">
-      <h2
-        class="row-start-1 rounded-full border border-stone-600 bg-gray-200/20 p-2 text-2xl font-bold text-stone-300"
-      >
-        Jakob Lingel
-      </h2>
+      <div class="col-span-2 flex gap-x-2">
+        <h2
+          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/20 p-2 px-4 text-2xl font-bold text-stone-300"
+        >
+          Jakob Lingel
+        </h2>
+        <div
+          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/20 p-2"
+        >
+          <a href="https://github.com/Davidcode2"
+            ><img src="../assets/github-mark.svg" width="35" alt="Github logo"
+          /></a>
+        </div>
+      </div>
       <h3
         class="col-span-full row-start-2 text-5xl font-extrabold text-stone-100"
       >
@@ -20,10 +26,11 @@
       </h3>
       <div class="col-span-3 row-start-3 flex gap-2 justify-self-center">
         <img
-          class="relative bottom-1"
+          class="relative bottom-1 cursor-pointer"
           src="../assets/icons8-keyboard-94.png"
           width="40"
-          alt=""
+          alt="Keyboard"
+          (click)="restartWritingAnimation()"
         />
         <app-text-writer></app-text-writer>
       </div>

@@ -11,12 +11,20 @@ import { TextWriterComponent } from '../text-writer/text-writer.component';
 })
 export class HeroComponent {
   shrink() {
+    let shrinkClasses = ["fixed", "scale-[0%]", "opacity-0"];
+    let hero = document.getElementById('hero')!;
+    hero.classList.add(...shrinkClasses);
+    window.scrollTo({top: 1000, behavior: "smooth"});
+    setTimeout(() => {
+      hero.classList.remove(...shrinkClasses);
+    }, 3000);
+
   }
   grow() {
     let growClasses = ["fixed", "scale-[200%]", "opacity-0"];
     let hero = document.getElementById('hero')!;
     hero.classList.add(...growClasses);
-    document.scrollingElement!.scrollTop = 1000;
+    window.scrollTo({top: 1000, behavior: "smooth"});
     setTimeout(() => {
       hero.classList.remove(...growClasses);
     }, 3000);

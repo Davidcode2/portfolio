@@ -1,28 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .abel-regular {
-  font-family: "Abel", sans-serif;
+  font-family: 'Abel', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .transparent {
-  background: rgba( 255, 255, 255, 0.05 );
-  box-shadow: 0 8px 32px 0 rgba( 11, 18, 105, 0.17 );
-  backdrop-filter: blur( 18px );
-  -webkit-backdrop-filter: blur( 18px );
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(11, 18, 105, 0.17);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   color: whitesmoke;
 }
 
 .slide-in {
-  animation: 1.5s ease-in-out 0s 1 slidein
+  animation: 1.5s ease-in-out 0s 1 slidein;
 }
 
 @keyframes slidein {
   0% {
-    opacity:0;
+    opacity: 0;
     transform: translateY(2rem);
   }
   100% {
     transform: translateY(0px);
-    opacity:1;
+    opacity: 1;
   }
 }

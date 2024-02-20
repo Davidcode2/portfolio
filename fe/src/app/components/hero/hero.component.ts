@@ -1,4 +1,4 @@
-import { Component  } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,16 +6,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  private words = ["Always growing", "Always improving"]
-  public typeWord: string[] = [];
+  private words = ['Always growing', 'Always improving'];
+  public typeWord: string = '';
   private displayWord!: Element;
+  //public cursor = '\u{2588}';
+  public cursor = '|';
   public length = 0;
 
   ngOnInit() {
-    this.displayWord = document.querySelector("#displayWord")!;
+    this.displayWord = document.querySelector('#displayWord')!;
     setTimeout(() => {
       this.makeWords();
     }, 3000);
@@ -23,10 +25,10 @@ export class HeroComponent {
 
   private async makeWords() {
     for (let [i, word] of this.words.entries()) {
-      let letters: string[] = word.split("");
+      let letters: string[] = word.split('');
       await this.addLetters(letters);
       if (i < this.words.length - 1) {
-         await this.removeLetters(this.displayWord);
+        await this.removeLetters();
       }
     }
   }
@@ -36,32 +38,33 @@ export class HeroComponent {
       let i = 0;
       let duration = 100;
       let interval = setInterval(() => {
-        this.displayWord.innerHTML += letters[i];
+        this.typeWord += letters[i];
+        //this.displayWord.innerHTML += letters[i];
         i++;
         if (i >= letters.length) {
           clearInterval(interval);
           resolve(duration * letters.length);
-        };
+        }
       }, duration);
     });
   }
 
-  private removeLetters(word: Element) {
+  private removeLetters() {
     return new Promise((resolve) => {
-      console.log("remove");
+      console.log('remove');
       let i = 0;
-      let length = word.innerHTML.length;
-      this.length = word.innerHTML.length - 1;
+      let length = this.typeWord.length;
+      this.length = this.typeWord.length - 1;
       let interval = setInterval(() => {
-        let wordWithPoppedLetter = word.innerHTML.slice(0,this.length);
-        word.innerHTML = wordWithPoppedLetter;
+        let wordWithPoppedLetter = this.typeWord.slice(0, this.length);
+        this.typeWord = wordWithPoppedLetter;
         this.length -= 1;
         i++;
-        if (i >= length - 2) {
+        if (i >= length) {
           clearInterval(interval);
-          resolve("blub");
-        };
-      },100);
+          resolve('blub');
+        }
+      }, 100);
     });
   }
 }

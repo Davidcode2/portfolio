@@ -1,7 +1,7 @@
 <div class="cardTrigger relative mt-52">
-  <div class="card z-50 shadow-md">
+  <div class="card z-50">
     <div
-      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame1 bg-cover bg-no-repeat"
+      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame1 bg-cover bg-no-repeat shadow-md"
     >
       <div
         class="col-span-3 col-start-4 row-start-3 self-center rounded-xl border border-gray-500 bg-blue-950/20 text-6xl font-bold"
@@ -10,58 +10,63 @@
       </div>
     </div>
   </div>
-  <div class="card z-40 shadow-md">
+  <div class="card z-40">
     <div
-      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame3 bg-cover bg-no-repeat"
+      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame3 bg-cover bg-no-repeat shadow-md"
     ></div>
   </div>
-  <div class="card z-30 shadow-md">
+  <div class="card z-30">
     <div
-      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame4 bg-cover bg-no-repeat"
-    >
-    </div>
+      class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame4 bg-cover bg-no-repeat shadow-md"
+    ></div>
   </div>
-  <div class="card z-20 shadow-md">
+  <div class="card z-20">
     <div
-      class="grid h-[70vh] grid-cols-9 grid-rows-5 border border-gray-800 rounded-3xl"
+      id="border-githubButton"
+      class="grid h-[70vh] grid-cols-10 grid-rows-5 rounded-3xl border border-gray-800"
     >
       <div
-        class="status col-span-3 col-start-4 row-start-3 m-4 self-center rounded-lg border border-neutral-600 bg-neutral-700/80 p-4"
+        (mouseenter)="animateGithubBorder()"
+        (mouseleave)="animateGithubBorderOut()"
+        class="col-span-2 col-start-5 row-span-2 row-start-2 flex items-center justify-center rounded-lg transition-colors"
+      >
+        <a href="https://github.com/Davidcode2/medievalShooter">
+          <img
+            src="../../../../assets/github-mark.svg"
+            alt=""
+            width="100"
+            class="hover:opacity-80"
+          />
+        </a>
+      </div>
+      <div
+        class="status col-span-2 col-start-3 row-start-4 m-4 self-center rounded-lg border border-neutral-600 bg-neutral-700/80 p-4"
+      >
+        <div class="flyInText flex">
+          <div>Repository:</div>
+          <a href="https://github.com/Davidcode2/medievalShooter"
+            ><div class="ml-2 text-pink-500">MedievalShooter</div></a
+          >
+        </div>
+      </div>
+      <div
+        class="status col-span-2 col-start-5 row-start-4 m-4 self-center rounded-lg border border-neutral-600 bg-neutral-700/80 p-4"
       >
         <div class="flyInText flex">
           <div>Status:</div>
           <div class="ml-2 text-green-500">Prototype</div>
         </div>
+      </div>
+
+      <div
+        class="status col-span-2 col-start-7 row-start-4 m-4 self-center rounded-lg border border-neutral-600 bg-neutral-700/80 p-4"
+      >
         <div class="flyInText flex">
           <div>Tools:</div>
           <div class="ml-2 text-blue-500">C#</div>
           <div class="ml-2 text-purple-500">Unity</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
-
-<!--
-<div class="trigger relative">
-  <div class="card z-30 bg-blue-200 p-20 py-52">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis,
-    accusamus ex, earum sapiente eos deserunt cupiditate laborum amet dolorum
-    doloribus aliquam quibusdam atque sunt. Labore consequuntur numquam libero
-    dolores.
-  </div>
-  <div class="card z-20 bg-blue-400 p-20 py-52">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis,
-    accusamus ex, earum sapiente eos deserunt cupiditate laborum amet dolorum
-    doloribus aliquam quibusdam atque sunt. Labore consequuntur numquam libero
-    dolores.
-  </div>
-  <div class="card z-10 bg-blue-500 p-20 py-52">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis,
-    accusamus ex, earum sapiente eos deserunt cupiditate laborum amet dolorum
-    doloribus aliquam quibusdam atque sunt. Labore consequuntur numquam libero
-    dolores.
-  </div>
-</div>
--->

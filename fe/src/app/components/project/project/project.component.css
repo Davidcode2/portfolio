@@ -1,0 +1,19 @@
+.card:nth-child(1) {
+  top: 100px;
+}
+
+.card:nth-child(2) {
+  top: -530px;
+  transform: scale(0.98);
+}
+.card:nth-child(3) {
+  top: -1160px;
+  transform: scale(0.96);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}

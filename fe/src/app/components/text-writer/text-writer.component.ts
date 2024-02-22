@@ -52,7 +52,6 @@ export class TextWriterComponent {
   private removeLetters(delay: number) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        console.log('remove');
         let i = 0;
         let length = this.typeWord.length;
         this.length = this.typeWord.length - 1;

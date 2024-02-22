@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        vrGame: "url('/assets/View.PNG')",
+        vrGame1: "url('/assets/View.PNG')",
+        vrGame2: "url('/assets/ScenePlane.PNG')",
+        vrGame3: "url('/assets/Watergun.PNG')",
+        vrGame4: "url('/assets/HandMovements.PNG')",
       },
     },
   },

@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroContainerComponent } from './components/hero-container/hero-container.component';
 import { ProjectComponent } from './components/project/project/project.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { ProjectComponent } from './components/project/project/project.component
     HeaderComponent,
     HeroContainerComponent,
     ProjectComponent,
+    TimelineComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

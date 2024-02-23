@@ -6,6 +6,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { HeroContainerComponent } from './components/hero-container/hero-container.component';
 import { ProjectComponent } from './components/project/project/project.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { SchluesselmomenteProjectComponent } from './components/project/schluesselmomente-project/schluesselmomente-project.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     HeroContainerComponent,
     ProjectComponent,
     TimelineComponent,
+    SchluesselmomenteProjectComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

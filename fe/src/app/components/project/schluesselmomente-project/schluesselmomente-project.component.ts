@@ -18,13 +18,15 @@ export class SchluesselmomenteProjectComponent {
         scrub: true,
         markers: true,
         start: 'top top',
-        end: 'bottom top',
       },
     });
     tl.to('.parallax', {
       y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
       ease: 'none',
     });
+    tl.to('.parallax', {
+      opacity: 0,
+    }, ">");
     tl.to('.schluesselmomente-main-image', {
       scale: 0.7,
       opacity: 0,

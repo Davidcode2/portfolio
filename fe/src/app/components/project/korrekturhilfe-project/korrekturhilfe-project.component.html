@@ -1,31 +1,7 @@
 <div
-  class="korrekturhilfe-card mt-96 rounded-3xl border border-gray-400 p-4 xl:p-20"
+  class="korrekturhilfe-card xl:mt-96 mt-40 rounded-3xl border border-gray-400 p-4 xl:p-20"
 >
-  <div class="grid grid-cols-2 gap-32">
-    <div class="flex flex-col gap-10">
-      <h3 class="text-left text-4xl">Teachers aid</h3>
-      <div class="transparent border border-neutral-500 p-4 text-left">
-        The teachers aid project was built as part of a uni assignment. It
-        consists of a frontend built in React and a backend built with python
-        using the flask framework. It enables the user to upload marked up pdf
-        exams. The program then reads the red markup with OpenCV and recognizes
-        the characters using the Google Cloud Vision Api. The user is then shown
-        the results and can corrent them if necessary.
-      </div>
-      <a href="https://github.com/Davidcode2/medievalShooter">
-        <img
-          src="../../../../assets/github-mark.svg"
-          alt=""
-          width="100"
-          class="hover:opacity-80"
-        />
-      </a>
-      <div class="flex gap-8">
-        <div class="transparent border border-neutral-500 rounded-lg p-4">Repository:</div>
-        <div class="transparent border border-neutral-500 rounded-lg p-4">Status:</div>
-        <div class="transparent border border-neutral-500 rounded-lg p-4">Tools:</div>
-      </div>
-    </div>
+  <div class="xl:grid grid-cols-2 gap-32">
     <div class="col-start-2 grid grid-cols-10 grid-rows-10">
       <img
         src="../../../../assets/2024-02-24-16-42-48.png"
@@ -34,19 +10,62 @@
       />
       <img
         src="../../../../assets/2024-02-24-16-43-03.png"
-        class="relative bottom-5 right-10 col-start-1 col-end-8 rounded-xl shadow-md"
+        class="relative xl:bottom-5 bottom-3 xl:right-10 right-6 col-start-1 col-end-8 rounded-xl shadow-md"
         alt=""
       />
       <img
         src="../../../../assets/2024-02-24-16-43-35.png"
-        class="relative right-20 col-span-3 col-start-1 row-span-3 row-start-6 rounded-xl"
+        class="relative xl:right-20 right-5 col-span-3 col-start-1 row-span-3 row-start-6 rounded-xl"
         alt=""
       />
       <img
         src="../../../../assets/2024-02-24-16-43-14.png"
-        class="relative left-10 col-span-3 col-start-8 row-span-5 row-start-10 rounded-xl shadow-lg"
+        class="relative xl:left-10 left-2 col-span-3 col-start-8 row-span-5 row-start-10 rounded-xl shadow-lg"
         alt=""
       />
+    </div>
+    <div class="row-start-1 flex flex-col gap-10">
+      <h3 class="text-left text-4xl">Teachers aid</h3>
+      <div class="transparent border border-neutral-500 p-4 text-left">
+        The teachers aid project was built as part of a uni assignment. It
+        consists of a frontend built in React and a backend built with python
+        using the flask framework. It enables the user to upload marked up pdf
+        exams. The program then reads the red markup with OpenCV and recognizes
+        the characters using the Google Cloud Vision Api. The user is then shown
+        the results and can correct them if necessary.
+      </div>
+      <a href="https://github.com/Davidcode2/Projektarbeit">
+        <img
+          src="../../../../assets/github-mark.svg"
+          alt=""
+          width="100"
+          class="hover:opacity-80"
+        />
+      </a>
+      <div class="flex xl:flex-row flex-col gap-4">
+        <div class="transparent rounded-lg border border-neutral-500 p-4">
+          <div class="flex">
+            <div>Repository:</div>
+            <a href="https://github.com/Davidcode2/Projektarbeit"
+              ><div class="ml-2 text-pink-500">Korrekturhilfe</div></a
+            >
+          </div>
+        </div>
+        <div class="transparent rounded-lg border border-neutral-500 p-4">
+          <div class="flex">
+            <div>Status:</div>
+            <div class="ml-2 text-green-500">Prototype</div>
+          </div>
+        </div>
+        <div class="transparent rounded-lg border border-neutral-500 p-4">
+          <div class="flex">
+            <div>Tools:</div>
+            <div class="ml-2 text-blue-500">React</div>
+            <div class="ml-2 text-purple-500">Python</div>
+            <div class="ml-2 text-fuchsia-500">Flask</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

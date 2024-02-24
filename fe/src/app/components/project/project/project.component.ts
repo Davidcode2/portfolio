@@ -34,52 +34,55 @@ export class ProjectComponent {
 
   private animate() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set('.card', { position: 'relative' });
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.cardTrigger',
-        markers: true,
-        scrub: true,
-        end: '+=5000px',
-        pin: true,
-      },
-    });
-
-    tl.to('.card', {
-      yPercent: -140,
-      scale: 1.1,
-      rotate: 2,
-      stagger: 0.5,
-    });
-    tl.to(
-      '.card',
-      {
-        stagger: 0.5,
-        delay: 0.1,
-        filter: 'blur(10px) grayscale(1)',
-      },
-      '<',
-    ),
-      tl.from(
-        '.status',
-        {
-          y: 5,
-          opacity: 0,
-          scale: 0.8,
-          duration: 0.3,
+    let mm = gsap.matchMedia();
+    mm.add('(min-width: 1280px)', () => {
+      gsap.set('.card', { position: 'relative' });
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.cardTrigger',
+          markers: true,
+          scrub: true,
+          end: '+=5000px',
+          pin: true,
         },
-        '<1',
+      });
+
+      tl.to('.card', {
+        yPercent: -140,
+        scale: 1.1,
+        rotate: 2,
+        stagger: 0.5,
+      });
+      tl.to(
+        '.card',
+        {
+          stagger: 0.5,
+          delay: 0.1,
+          filter: 'blur(10px) grayscale(1)',
+        },
+        '<',
+      ),
+        tl.from(
+          '.status',
+          {
+            y: 5,
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.3,
+          },
+          '<1',
+        );
+      tl.from(
+        '.flyInText',
+        {
+          stagger: 0.02,
+          y: 15,
+          filter: 'blur(10px)',
+          opacity: 0,
+          duration: 0.2,
+        },
+        '<',
       );
-    tl.from(
-      '.flyInText',
-      {
-        stagger: 0.02,
-        y: 15,
-        filter: 'blur(10px)',
-        opacity: 0,
-        duration: 0.2,
-      },
-      '<',
-    );
+    });
   }
 }

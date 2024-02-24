@@ -7,6 +7,7 @@ import { HeroContainerComponent } from './components/hero-container/hero-contain
 import { ProjectComponent } from './components/project/project/project.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { SchluesselmomenteProjectComponent } from './components/project/schluesselmomente-project/schluesselmomente-project.component';
+import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { SchluesselmomenteProjectComponent } from './components/project/schluess
     HeroContainerComponent,
     ProjectComponent,
     TimelineComponent,
-    SchluesselmomenteProjectComponent
+    SchluesselmomenteProjectComponent,
+    KorrekturhilfeProjectComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

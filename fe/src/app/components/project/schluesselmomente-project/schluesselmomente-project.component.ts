@@ -23,26 +23,17 @@ export class SchluesselmomenteProjectComponent {
           trigger: '.trigger',
           scrub: true,
           markers: true,
-          start: 'top top',
+          start: 'start 350',
         },
       });
       tl.to('.parallax', {
         y: (i, target) =>
-          -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+          target.dataset.speed,
         ease: 'none',
       });
       tl.to(
-        '.parallax',
-        {
-          opacity: 0,
-        },
-        '>',
-      );
-      tl.to(
         '.schluesselmomente-main-image',
         {
-          scale: 0.7,
-          opacity: 0,
         },
         '>',
       );
@@ -53,7 +44,6 @@ export class SchluesselmomenteProjectComponent {
             trigger: '.schluesselmomente-card',
             scrub: true,
           },
-          scale: 0.9,
         },
         '-=1',
       );

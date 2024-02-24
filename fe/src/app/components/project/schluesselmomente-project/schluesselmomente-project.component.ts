@@ -11,33 +11,53 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 })
 export class SchluesselmomenteProjectComponent {
   ngOnInit() {
-    gsap.registerPlugin(ScrollTrigger);
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.trigger',
-        scrub: true,
-        markers: true,
-        start: 'top top',
-      },
+    this.animate();
+  }
+
+  private animate() {
+    let mm = gsap.matchMedia();
+    mm.add('(min-width: 1280px)', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.trigger',
+          scrub: true,
+          markers: true,
+          start: 'top top',
+        },
+      });
+      tl.to('.parallax', {
+        y: (i, target) =>
+          -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+        ease: 'none',
+      });
+      tl.to(
+        '.parallax',
+        {
+          opacity: 0,
+        },
+        '>',
+      );
+      tl.to(
+        '.schluesselmomente-main-image',
+        {
+          scale: 0.7,
+          opacity: 0,
+        },
+        '>',
+      );
+      tl.from(
+        '.schluesselmomente-card',
+        {
+          scrollTrigger: {
+            trigger: '.schluesselmomente-card',
+            scrub: true,
+          },
+          scale: 0.9,
+        },
+        '-=1',
+      );
     });
-    tl.to('.parallax', {
-      y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-      ease: 'none',
-    });
-    tl.to('.parallax', {
-      opacity: 0,
-    }, ">");
-    tl.to('.schluesselmomente-main-image', {
-      scale: 0.7,
-      opacity: 0,
-    }, ">");
-    tl.from('.schluesselmomente-card', {
-      scrollTrigger: {
-        trigger: '.schluesselmomente-card',
-        scrub: true,
-      },
-      scale: .9,
-    }, "-=1");
   }
 
   public animateGithubBorder() {

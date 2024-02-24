@@ -1,3 +1,5 @@
+html{scroll-behavior:smooth}
+
 .slide-in {
   animation: 3.5s ease-in-out 0s 1 slidein
 }

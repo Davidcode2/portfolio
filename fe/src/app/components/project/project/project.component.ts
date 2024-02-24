@@ -37,6 +37,10 @@ export class ProjectComponent {
     let mm = gsap.matchMedia();
     mm.add('(min-width: 1280px)', () => {
       gsap.set('.card', { position: 'relative' });
+      gsap.set('.card', { marginBottom: '50px' });
+      gsap.set('.card:nth-child(2)', { scale: '0.98' });
+      gsap.set('.card:nth-child(3)', { scale: '0.96' });
+      gsap.set('.card:nth-child(4)', { scale: '0.94' });
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.cardTrigger',
@@ -44,6 +48,7 @@ export class ProjectComponent {
           scrub: true,
           end: '+=5000px',
           pin: true,
+          start: 'top 100px',
         },
       });
 

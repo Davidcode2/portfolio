@@ -1,25 +1,17 @@
-.card:nth-child(1) {
-  top: 100px;
-}
-
 .card:nth-child(2) {
-  top: -590px;
-  transform: scale(0.98);
+  top: -690px;
 }
 .card:nth-child(3) {
-  top: -1280px;
-  transform: scale(0.96);
+  top: -1380px;
 }
 .card:nth-child(4) {
-  top: -1970px;
-  transform: scale(0.94);
+  top: -2070px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 .transparent {

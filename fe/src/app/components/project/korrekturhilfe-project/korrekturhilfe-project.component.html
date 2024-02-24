@@ -1,7 +1,7 @@
 <div
-  class="korrekturhilfe-card xl:mt-96 mt-40 rounded-3xl border border-gray-400 p-4 xl:p-20"
+  class="korrekturhilfe-card mt-40 rounded-3xl border border-gray-400 p-4 xl:mt-96 xl:p-20"
 >
-  <div class="xl:grid grid-cols-2 gap-32">
+  <div class="grid-cols-2 gap-32 xl:grid">
     <div class="col-start-2 grid grid-cols-10 grid-rows-10">
       <img
         src="../../../../assets/2024-02-24-16-42-48.png"
@@ -10,17 +10,17 @@
       />
       <img
         src="../../../../assets/2024-02-24-16-43-03.png"
-        class="relative xl:bottom-5 bottom-3 xl:right-10 right-6 col-start-1 col-end-8 rounded-xl shadow-md"
+        class="relative bottom-3 right-6 col-start-1 col-end-8 rounded-xl shadow-md xl:bottom-5 xl:right-10"
         alt=""
       />
       <img
         src="../../../../assets/2024-02-24-16-43-35.png"
-        class="relative xl:right-20 right-5 col-span-3 col-start-1 row-span-3 row-start-6 rounded-xl"
+        class="relative right-5 col-span-3 col-start-1 row-span-3 row-start-6 rounded-xl shadow-md xl:right-20"
         alt=""
       />
       <img
         src="../../../../assets/2024-02-24-16-43-14.png"
-        class="relative xl:left-10 left-2 col-span-3 col-start-8 row-span-5 row-start-10 rounded-xl shadow-lg"
+        class="relative left-2 col-span-3 col-start-8 row-span-5 row-start-10 rounded-xl shadow-lg xl:left-10"
         alt=""
       />
     </div>
@@ -28,7 +28,22 @@
       <h3 class="text-left text-4xl">Teachers aid</h3>
       <div class="transparent border border-neutral-500 p-4 text-left">
         The teachers aid project was built as part of a uni assignment. It
-        consists of a frontend built in React and a backend built with python
+        consists of a frontend built in React
+        <span class="inline-block"
+          ><img
+            class="relative top-2"
+            src="../assets/icons/icons8-react-native-48.png"
+            width="30"
+            alt=""
+        /></span>
+        and a backend built with python
+        <span class="inline-block"
+          ><img
+            class="relative top-2"
+            src="../assets/icons/icons8-python-48.png"
+            width="30"
+            alt=""
+        /></span>
         using the flask framework. It enables the user to upload marked up pdf
         exams. The program then reads the red markup with OpenCV and recognizes
         the characters using the Google Cloud Vision Api. The user is then shown
@@ -42,7 +57,7 @@
           class="hover:opacity-80"
         />
       </a>
-      <div class="flex xl:flex-row flex-col gap-4">
+      <div class="flex flex-col gap-4 xl:flex-row">
         <div class="transparent rounded-lg border border-neutral-500 p-4">
           <div class="flex">
             <div>Repository:</div>

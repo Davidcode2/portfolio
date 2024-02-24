@@ -1,11 +1,11 @@
 <div class="xl:h-[500vh]">
-  <div class="cardTrigger flex flex-col xl:gap-0 gap-2 relative">
+  <div class="cardTrigger relative flex flex-col gap-2 xl:gap-0">
     <div class="card z-50">
       <div
-        class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl place-items-center bg-vrGame1 bg-cover bg-no-repeat shadow-md"
+        class="grid h-[70vh] grid-cols-9 grid-rows-5 place-items-center rounded-3xl bg-vrGame1 bg-cover bg-no-repeat shadow-md"
       >
         <div
-          class="transparent col-span-3 col-start-4 row-start-3 self-center rounded-xl border border-gray-500 bg-blue-950/20 p-20 xl:text-6xl font-bold"
+          class="transparent col-span-3 col-start-4 row-start-3 self-center rounded-xl border border-gray-500 bg-blue-950/20 p-20 font-bold xl:text-6xl"
         >
           VR Shooter
         </div>
@@ -24,7 +24,7 @@
     <div class="card z-20">
       <div
         id="border-githubButton"
-        class="flex flex-col p-8 xl:p-0 xl:grid xl:h-[70vh] grid-cols-10 grid-rows-6 gap-4 rounded-3xl border border-gray-400"
+        class="flex grid-cols-10 grid-rows-6 flex-col gap-4 rounded-3xl border border-gray-400 p-8 xl:grid xl:h-[70vh] xl:p-0"
       >
         <div
           (mouseenter)="animateGithubBorder()"
@@ -44,16 +44,23 @@
           Virtual Reality Game
         </h3>
         <div
-          class="transparent col-span-3 col-start-3 row-span-2 row-start-3 xl:self-center rounded-lg border border-neutral-600 p-4 text-left text-neutral-200"
+          class="transparent col-span-3 col-start-3 row-span-2 row-start-3 rounded-lg border border-neutral-600 p-4 text-left text-neutral-200 xl:self-center"
         >
           This project was built as part of a uni assignment. It is a simple VR
-          shooter game with a score system. The player can pick up guns and
-          shoot targets. Ricocheting bullets off of surfaces earns the player
-          extra points. The game was developed and tested with the Pico Neo 3 VR
-          headset.
+          shooter game
+          <span class="inline-block"
+            ><img
+              class="relative top-2"
+              src="../assets/icons/icons8-virtual-reality-32.png"
+              width="30"
+              alt=""
+          /></span>
+          with a score system. The player can pick up guns and shoot targets.
+          Ricocheting bullets off of surfaces earns the player extra points. The
+          game was developed and tested with the Pico Neo 3 VR headset.
         </div>
         <div
-          class="status transparent col-span-2 col-start-3 row-start-5 xl:self-center rounded-lg border border-neutral-600 p-4"
+          class="status transparent col-span-2 col-start-3 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
         >
           <div class="flyInText flex">
             <div>Repository:</div>
@@ -63,7 +70,7 @@
           </div>
         </div>
         <div
-          class="status transparent col-span-2 col-start-5 row-start-5 xl:self-center rounded-lg border border-neutral-600 p-4"
+          class="status transparent col-span-2 col-start-5 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
         >
           <div class="flyInText flex">
             <div>Status:</div>
@@ -72,7 +79,7 @@
         </div>
 
         <div
-          class="status transparent col-span-2 col-start-7 row-start-5 xl:self-center rounded-lg border border-neutral-600 p-4"
+          class="status transparent col-span-2 col-start-7 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
         >
           <div class="flyInText flex">
             <div>Tools:</div>

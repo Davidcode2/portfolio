@@ -22,7 +22,6 @@ export class SchluesselmomenteProjectComponent {
         scrollTrigger: {
           trigger: '.trigger',
           scrub: true,
-          markers: true,
           start: 'start 350',
         },
       });

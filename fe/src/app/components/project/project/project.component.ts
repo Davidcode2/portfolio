@@ -44,7 +44,6 @@ export class ProjectComponent {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.cardTrigger',
-          markers: true,
           scrub: true,
           end: '+=5000px',
           pin: true,

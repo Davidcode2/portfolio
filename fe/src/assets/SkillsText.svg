@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="203.34125mm"
+   height="52.987259mm"
+   viewBox="0 0 203.34125 52.987259"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="SkillsText.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.27416167"
+     inkscape:cx="787.85632"
+     inkscape:cy="284.50367"
+     inkscape:window-width="1686"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#800080;stop-opacity:1"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="30.365526"
+       y1="160.13408"
+       x2="402.46149"
+       y2="153.59729"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-41.107061,-53.043244)">
+    <text
+       xml:space="preserve"
+       style="font-size:70.5556px;fill:url(#linearGradient2);fill-opacity:1;stroke-width:0.264583"
+       x="37.297058"
+       y="105.46606"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;font-family:'Iosevka Nerd Font Propo';-inkscape-font-specification:'Iosevka Nerd Font Propo';fill:url(#linearGradient2);fill-opacity:1;stroke-width:0.264583"
+         x="37.297058"
+         y="105.46606"
+         sodipodi:role="line">Skills</tspan></text>
+  </g>
+</svg>

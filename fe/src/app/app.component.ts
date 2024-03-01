@@ -31,35 +31,43 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class AppComponent implements OnInit {
   ngOnInit() {
     this.animateProjectHeader();
-    this.animateSkillsHeader();
+    this.animateThisProjectSection();
   }
 
-  private animateSkillsHeader() {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set('#skills', { xPercent: 60 });
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#skills',
-        scrub: true,
-      },
-      stagger: 0.4,
-    });
-    tl.to('#skills', {
-      xPercent: -50,
-    });
-  }
   private animateProjectHeader() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.set('#projects', { xPercent: 60 });
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#projects',
-        scrub: true,
+        scrub: 0.1,
       },
       stagger: 0.4,
     });
     tl.to('#projects', {
       xPercent: -50,
     });
+  }
+
+  private animateThisProjectSection() {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        scrub: 1,
+        pin: true,
+        trigger: '#spinContainer',
+        start: 'top 50%',
+        end: 'bottom 20%',
+        markers: true,
+      },
+    });
+    tl.to('.rocketShip', {
+      rotate: 720,
+    });
+    tl.to('.rocketShip1', {
+      rotate: 360,
+    }, '<');
+    tl.to('.rocketShip2', {
+      rotate: 180,
+    }, '<');
   }
 }

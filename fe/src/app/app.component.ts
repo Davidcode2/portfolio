@@ -57,7 +57,6 @@ export class AppComponent implements OnInit {
         trigger: '#spinContainer',
         start: 'top 50%',
         end: 'bottom 20%',
-        markers: true,
       },
     });
     tl.to('.rocketShip', {

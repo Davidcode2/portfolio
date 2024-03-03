@@ -11,6 +11,7 @@ import { KorrekturhilfeProjectComponent } from './components/project/korrekturhi
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PortfolioProjectComponent } from './src/app/components/project/portfolio-project/portfolio-project.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { PortfolioProjectComponent } from './src/app/components/project/portfoli
     TimelineComponent,
     SchluesselmomenteProjectComponent,
     KorrekturhilfeProjectComponent,
-    PortfolioProjectComponent
+    PortfolioProjectComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -7,10 +7,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   standalone: true,
   imports: [],
   templateUrl: './portfolio-project.component.html',
-  styleUrl: './portfolio-project.component.css'
+  styleUrl: './portfolio-project.component.css',
 })
 export class PortfolioProjectComponent implements OnInit {
-
   ngOnInit() {
     this.animateThisProjectSection();
   }
@@ -18,18 +17,18 @@ export class PortfolioProjectComponent implements OnInit {
   private animateThisProjectSection() {
     gsap.registerPlugin(ScrollTrigger);
     let mm = gsap.matchMedia();
-    gsap.to('.parallaxBox1', {
-      y: 100,
-      x: 10,
-      repeat: -1,
-      yoyo: true,
-      duration: 4,
-      ease: 'sine.inOut',
-      stagger: 2
-    });
     mm.add('(min-width: 1280px)', () => {
+      gsap.to('.parallaxBox1', {
+        y: 100,
+        x: 10,
+        repeat: -1,
+        yoyo: true,
+        duration: 4,
+        ease: 'sine.inOut',
+        stagger: 2,
+      });
       gsap.set('.parallaxBox', {
-        y: -200
+        y: -200,
       });
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -43,11 +42,14 @@ export class PortfolioProjectComponent implements OnInit {
       tl.to('.rocketShip', {
         rotate: 720,
       });
-      tl.to('.parallaxBox', {
-        y: (i, target) =>
-          target.dataset.speed * window.scrollY / 1000,
-        ease: 'none',
-      }, '<');
+      tl.to(
+        '.parallaxBox',
+        {
+          y: (i, target) => (target.dataset.speed * window.scrollY) / 1000,
+          ease: 'none',
+        },
+        '<',
+      );
       tl.to(
         '.rocketShip1',
         {

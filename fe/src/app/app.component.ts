@@ -50,23 +50,34 @@ export class AppComponent implements OnInit {
   }
 
   private animateThisProjectSection() {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-        pin: true,
-        trigger: '#spinContainer',
-        start: 'top 50%',
-        end: 'bottom 20%',
-      },
+    let mm = gsap.matchMedia();
+    mm.add('(min-width: 1280px)', () => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          scrub: 1,
+          pin: true,
+          trigger: '#spinContainer',
+          start: 'top 50%',
+          end: 'bottom 20%',
+        },
+      });
+      tl.to('.rocketShip', {
+        rotate: 720,
+      });
+      tl.to(
+        '.rocketShip1',
+        {
+          rotate: 360,
+        },
+        '<',
+      );
+      tl.to(
+        '.rocketShip2',
+        {
+          rotate: 180,
+        },
+        '<',
+      );
     });
-    tl.to('.rocketShip', {
-      rotate: 720,
-    });
-    tl.to('.rocketShip1', {
-      rotate: 360,
-    }, '<');
-    tl.to('.rocketShip2', {
-      rotate: 180,
-    }, '<');
   }
 }

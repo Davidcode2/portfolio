@@ -17,25 +17,7 @@ export class PortfolioProjectComponent implements OnInit {
   private animateThisProjectSection() {
     gsap.registerPlugin(ScrollTrigger);
     let mm = gsap.matchMedia();
-    gsap.to('.parallaxBox1', {
-      y: 100,
-      x: 10,
-      repeat: -1,
-      yoyo: true,
-      duration: 4,
-      ease: 'sine.inOut',
-      stagger: 2
-    });
     mm.add('(min-width: 1280px)', () => {
-      gsap.to('.parallaxBox1', {
-        y: 100,
-        x: 10,
-        repeat: -1,
-        yoyo: true,
-        duration: 4,
-        ease: 'sine.inOut',
-        stagger: 2,
-      });
       gsap.set('.parallaxBox', {
         y: -200,
       });

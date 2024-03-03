@@ -10,6 +10,7 @@ import { SchluesselmomenteProjectComponent } from './components/project/schluess
 import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PortfolioProjectComponent } from './src/app/components/project/portfolio-project/portfolio-project.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
     TimelineComponent,
     SchluesselmomenteProjectComponent,
     KorrekturhilfeProjectComponent,
+    PortfolioProjectComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -31,7 +33,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class AppComponent implements OnInit {
   ngOnInit() {
     this.animateProjectHeader();
-    this.animateThisProjectSection();
   }
 
   private animateProjectHeader() {
@@ -49,35 +50,4 @@ export class AppComponent implements OnInit {
     });
   }
 
-  private animateThisProjectSection() {
-    let mm = gsap.matchMedia();
-    mm.add('(min-width: 1280px)', () => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          scrub: 1,
-          pin: true,
-          trigger: '#spinContainer',
-          start: 'top 50%',
-          end: 'bottom 20%',
-        },
-      });
-      tl.to('.rocketShip', {
-        rotate: 720,
-      });
-      tl.to(
-        '.rocketShip1',
-        {
-          rotate: 360,
-        },
-        '<',
-      );
-      tl.to(
-        '.rocketShip2',
-        {
-          rotate: 180,
-        },
-        '<',
-      );
-    });
-  }
 }

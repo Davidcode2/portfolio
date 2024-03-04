@@ -10,7 +10,7 @@ import { SchluesselmomenteProjectComponent } from './components/project/schluess
 import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { PortfolioProjectComponent } from './src/app/components/project/portfolio-project/portfolio-project.component';
+import { PortfolioProjectComponent } from './components/project/portfolio-project/portfolio-project.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({

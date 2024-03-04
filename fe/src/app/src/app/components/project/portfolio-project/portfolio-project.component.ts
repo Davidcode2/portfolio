@@ -30,13 +30,16 @@ export class PortfolioProjectComponent implements OnInit {
           end: 'bottom 20%',
         },
       });
+      tl.set('#spinContainer', {
+        className: '+=z-50',
+      });
       tl.to('.rocketShip', {
         rotate: 720,
       });
       tl.to(
         '.parallaxBox',
         {
-          y: (i, target) => (target.dataset.speed * window.scrollY) / 1000,
+          y: (i, target) => target.dataset.speed,
           ease: 'none',
         },
         '<',

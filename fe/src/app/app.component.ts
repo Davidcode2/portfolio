@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroContainerComponent } from './components/hero-container/hero-container.component';
@@ -8,8 +10,6 @@ import { ProjectComponent } from './components/project/project/project.component
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { SchluesselmomenteProjectComponent } from './components/project/schluesselmomente-project/schluesselmomente-project.component';
 import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PortfolioProjectComponent } from './components/project/portfolio-project/portfolio-project.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -27,7 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SchluesselmomenteProjectComponent,
     KorrekturhilfeProjectComponent,
     PortfolioProjectComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -51,5 +51,4 @@ export class AppComponent implements OnInit {
       xPercent: -50,
     });
   }
-
 }

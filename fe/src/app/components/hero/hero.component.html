@@ -4,39 +4,41 @@
     class="slide-in transition:all transparent shadow:md z-30 self-center rounded-lg border border-stone-800 bg-gradient-to-tr from-stone-800 to-stone-950 pb-8 shadow-emerald-500 duration-300"
   >
     <app-window-buttons [window]="heroElement"></app-window-buttons>
-    <div class="grid grid-cols-3 gap-8 xl:px-40 px-10 py-32">
-      <div class="col-span-3 xl:col-span-2 flex gap-x-2">
+    <div class="grid grid-cols-3 gap-8 px-10 py-32 xl:px-40">
+      <div class="col-span-3 flex gap-x-2 xl:col-span-2">
         <h2
-          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/10 p-2 px-4 text-sm xl:text-2xl font-bold text-stone-300"
+          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/10 p-2 px-4 text-sm font-bold text-stone-300 xl:text-2xl"
         >
           Jakob Lingel
         </h2>
         <div
-            class="row-start-1 rounded-full border border-stone-600 bg-gray-200/10 p-2 xl:w-[3.2rem] w-[2.4rem]"
+          class="row-start-1 w-[2.4rem] rounded-full border border-stone-600 bg-gray-200/10 p-2 xl:w-[3.2rem]"
         >
           <a href="https://github.com/Davidcode2" target="_blank"
             ><img src="../assets/github-mark.svg" alt="Github logo"
           /></a>
         </div>
         <div
-          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/10 py-2 px-[11px]"
+          class="row-start-1 rounded-full border border-stone-600 bg-gray-200/10 px-[11px] py-2"
         >
-          <a href="https://www.linkedin.com/in/jakob-lingel-613976253/" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/jakob-lingel-613976253/"
+            target="_blank"
             ><img
-                 class="relative top-[2px] xl:w-7 w-4"
+              class="relative top-[2px] w-4 xl:w-7"
               src="../assets/In-White-40.png"
               alt="LinkedIn logo"
           /></a>
         </div>
       </div>
       <h3
-        class="col-span-full row-start-2 xl:text-5xl font-extrabold text-stone-100"
+        class="col-span-full row-start-2 font-extrabold text-stone-100 xl:text-5xl"
       >
         {{ '{' + '&nbsp;Fullstack&nbsp;Software&nbsp;Developer&nbsp;' + '}' }}
       </h3>
       <div class="col-span-3 row-start-3 flex gap-2 justify-self-center">
         <img
-          class="relative bottom-1 cursor-pointer  w-8 xl:w-10"
+          class="relative bottom-1 w-8 cursor-pointer xl:w-10"
           src="../assets/icons/icons8-keyboard-94.png"
           alt="Keyboard"
           (click)="restartWritingAnimation()"

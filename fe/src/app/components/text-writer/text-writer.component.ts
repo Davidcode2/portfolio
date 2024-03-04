@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './text-writer.component.html',
-  styleUrl: './text-writer.component.css'
+  styleUrl: './text-writer.component.css',
 })
 export class TextWriterComponent {
   private words = ['Always growing', 'Always improving'];
@@ -68,5 +68,4 @@ export class TextWriterComponent {
       }, delay);
     });
   }
-
 }

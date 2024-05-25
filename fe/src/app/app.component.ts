@@ -12,6 +12,7 @@ import { SchluesselmomenteProjectComponent } from './components/project/schluess
 import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
 import { PortfolioProjectComponent } from './components/project/portfolio-project/portfolio-project.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { OdinMemoryComponent } from './components/project/odin-memory/odin-memory.component';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     KorrekturhilfeProjectComponent,
     PortfolioProjectComponent,
     FooterComponent,
+    OdinMemoryComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

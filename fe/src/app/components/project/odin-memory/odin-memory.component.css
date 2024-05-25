@@ -1,0 +1,8 @@
+.transparent {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(11, 18, 105, 0.17);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: whitesmoke;
+  border-radius: 0.5rem;
+}

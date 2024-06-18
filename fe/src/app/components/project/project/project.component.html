@@ -1,91 +1,64 @@
-<div class="xl:h-[500vh]">
-  <div class="cardTrigger relative flex flex-col gap-2 xl:gap-0">
-    <div class="card z-50">
-      <div
-        class="grid h-[70vh] grid-cols-9 grid-rows-5 place-items-center rounded-3xl bg-vrGame1 bg-cover bg-no-repeat shadow-md"
-      >
-        <div
-          class="transparent col-span-3 col-start-4 row-start-3 self-center rounded-xl border border-gray-500 bg-blue-950/20 p-20 font-bold xl:text-6xl"
-        >
-          VR Shooter
-        </div>
+<div
+  id="border-githubButton"
+  class="z-50 flex grid-cols-5 grid-rows-6 flex-col justify-evenly gap-4 p-2 xl:mx-52 xl:grid xl:h-[80vh] xl:p-0"
+>
+  <div
+    (mouseenter)="animateGithubBorder()"
+    (mouseleave)="animateGithubBorderOut()"
+    class="z-50 col-span-2 row-span-2 row-start-3 flex items-center justify-center rounded-lg transition-colors"
+  >
+  <a href={{project.githubRepoUrl}}>
+      <img
+        src="../../../../assets/github-mark.svg"
+        alt="github logo"
+        width="100"
+        class="hover:opacity-80"
+      />
+    </a>
+  </div>
+  <h3
+    class="col-span-4 col-start-1 row-start-2 self-center text-4xl xl:text-left"
+  >
+    {{ project.title }}
+  </h3>
+  <div
+    class="transparent col-span-3 col-start-1 row-span-2 row-start-3 rounded-lg border border-neutral-600 p-4 text-left text-neutral-200 xl:self-center"
+    [innerHTML]="project.description"
+  >
+  </div>
+  <div class="col-span-full row-start-5 flex flex-col gap-4 xl:flex-row">
+    <div
+      class="transparent flex-1 rounded-lg border border-neutral-600 p-4 pr-10 xl:self-center"
+    >
+      <div class="flex">
+        <div>Website:</div>
+        <a class="flex" href="{{ project.url }}"
+          ><div class="ml-2 flex text-pink-500">
+            {{ project.shortTitle }}
+            <img
+              src="../../../../assets/icons/icons8-new-tab-24.png"
+              alt="new tab icon"
+            />
+          </div>
+        </a>
       </div>
     </div>
-    <div class="card z-40">
-      <div
-        class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame3 bg-cover bg-no-repeat shadow-md"
-      ></div>
+    <div
+      class="status transparent flex-1 rounded-lg border border-neutral-600 p-4 xl:self-center"
+    >
+      <div class="flyInText flex">
+        <div>Status:</div>
+        <div class="ml-2 text-green-500">{{project.status}}</div>
+      </div>
     </div>
-    <div class="card z-30">
-      <div
-        class="grid h-[70vh] grid-cols-9 grid-rows-5 rounded-3xl bg-vrGame4 bg-cover bg-no-repeat shadow-md"
-      ></div>
-    </div>
-    <div class="card z-20">
-      <div
-        id="border-githubButton"
-        class="flex grid-cols-10 grid-rows-6 flex-col gap-4 rounded-3xl border border-gray-400 p-6 xl:grid xl:h-[70vh] xl:p-0"
-      >
-        <div
-          (mouseenter)="animateGithubBorder()"
-          (mouseleave)="animateGithubBorderOut()"
-          class="col-span-2 col-start-6 row-span-2 row-start-3 flex items-center justify-center rounded-lg transition-colors"
-        >
-          <a href="https://github.com/Davidcode2/medievalShooter">
-            <img
-              src="../../../../assets/github-mark.svg"
-              alt="github logo"
-              width="100"
-              class="hover:opacity-80"
-            />
-          </a>
-        </div>
-        <h3 class="col-span-4 col-start-2 row-start-2 self-center text-4xl">
-          Virtual Reality Game
-        </h3>
-        <div
-          class="transparent col-span-3 col-start-3 row-span-2 row-start-3 rounded-lg border border-neutral-600 p-4 text-left text-neutral-200 xl:self-center"
-        >
-          This project was built as part of a uni assignment. It is a simple VR
-          shooter game
-          <span class="inline-block"
-            ><img
-              class="relative top-2"
-              src="../assets/icons/icons8-virtual-reality-32.png"
-              width="30"
-              alt="virtual reality goggles"
-          /></span>
-          with a score system. The player can pick up guns and shoot targets.
-          Ricocheting bullets off of surfaces earns the player extra points. The
-          game was developed and tested with the Pico Neo 3 VR headset.
-        </div>
-        <div
-          class="status transparent col-span-2 col-start-3 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
-        >
-          <div class="flyInText flex">
-            <div>Repository:</div>
-            <a href="https://github.com/Davidcode2/medievalShooter"
-              ><div class="ml-2 text-pink-500">MedievalShooter</div></a
-            >
-          </div>
-        </div>
-        <div
-          class="status transparent col-span-2 col-start-5 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
-        >
-          <div class="flyInText flex">
-            <div>Status:</div>
-            <div class="ml-2 text-green-500">Prototype</div>
-          </div>
-        </div>
 
-        <div
-          class="status transparent col-span-2 col-start-7 row-start-5 rounded-lg border border-neutral-600 p-4 xl:self-center"
-        >
-          <div class="flyInText flex">
-            <div>Tools:</div>
-            <div class="ml-2 text-blue-500">C#</div>
-            <div class="ml-2 text-purple-500">Unity</div>
-          </div>
+    <div
+      class="status transparent flex-1 rounded-lg border border-neutral-600 p-4 xl:self-center"
+    >
+      <div class="flyInText flex">
+        <div>Tools:</div>
+        <div *ngFor="let tool of project.tools">
+          <div class="ml-2 text-{{tool.color}}">{{ tool.name }}</div>
         </div>
       </div>
     </div>

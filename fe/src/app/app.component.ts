@@ -6,13 +6,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroContainerComponent } from './components/hero-container/hero-container.component';
-import { ProjectComponent } from './components/project/project/project.component';
+import { VRShooterComponent } from './components/project/vr-shooter/vr-shooter.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { SchluesselmomenteProjectComponent } from './components/project/schluesselmomente-project/schluesselmomente-project.component';
 import { KorrekturhilfeProjectComponent } from './components/project/korrekturhilfe-project/korrekturhilfe-project.component';
 import { PortfolioProjectComponent } from './components/project/portfolio-project/portfolio-project.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OdinMemoryComponent } from './components/project/odin-memory/odin-memory.component';
+import { ProjectComponent } from './components/project/project/project.component';
 
 @Component({
   selector: 'app-root',
@@ -23,13 +24,14 @@ import { OdinMemoryComponent } from './components/project/odin-memory/odin-memor
     HeroComponent,
     HeaderComponent,
     HeroContainerComponent,
-    ProjectComponent,
+    VRShooterComponent,
     TimelineComponent,
     SchluesselmomenteProjectComponent,
     KorrekturhilfeProjectComponent,
     PortfolioProjectComponent,
     FooterComponent,
     OdinMemoryComponent,
+    ProjectComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

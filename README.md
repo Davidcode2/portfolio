@@ -2,4 +2,11 @@
 
 ## Simple Portfolio Page built with Angular
 
-deployed here: https://clever-pasca-29d973.netlify.app/
+deployed here: 
+
+[https://portfolio.teachly.store/](https://portfolio.teachly.store/)
+
+and here:
+
+[https://clever-pasca-29d973.netlify.app/](https://clever-pasca-29d973.netlify.app/)
+

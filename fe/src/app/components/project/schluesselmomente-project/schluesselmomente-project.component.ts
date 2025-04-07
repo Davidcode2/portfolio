@@ -43,7 +43,7 @@ export class SchluesselmomenteProjectComponent {
           src = "../assets/icons/icons8-javascript-48.png"
           width="30"
           alt="javascript logo" /> </span
-    >.It is a static website with a contact form.Tailwindcss was used for
+    >.It is a static website with a contact form. Tailwindcss was used for
       styling.
 `,
     url: 'https://schluesselmomente-freiburg.de',

@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { HeaderComponent } from './components/header/header.component';
-import { HeroComponent } from './components/hero/hero.component';
 import { HeroContainerComponent } from './components/hero-container/hero-container.component';
 import { VRShooterComponent } from './components/project/vr-shooter/vr-shooter.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
@@ -13,15 +10,11 @@ import { KorrekturhilfeProjectComponent } from './components/project/korrekturhi
 import { PortfolioProjectComponent } from './components/project/portfolio-project/portfolio-project.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OdinMemoryComponent } from './components/project/odin-memory/odin-memory.component';
-import { ProjectComponent } from './components/project/project/project.component';
 
 @Component({
     selector: 'app-root',
     imports: [
         CommonModule,
-        RouterOutlet,
-        HeroComponent,
-        HeaderComponent,
         HeroContainerComponent,
         VRShooterComponent,
         TimelineComponent,
@@ -30,7 +23,6 @@ import { ProjectComponent } from './components/project/project/project.component
         PortfolioProjectComponent,
         FooterComponent,
         OdinMemoryComponent,
-        ProjectComponent
     ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'

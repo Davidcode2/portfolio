@@ -4,11 +4,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectComponent } from '../project/project.component';
 
 @Component({
-  selector: 'app-schluesselmomente-project',
-  standalone: true,
-  imports: [ProjectComponent],
-  templateUrl: './schluesselmomente-project.component.html',
-  styleUrl: './schluesselmomente-project.component.css',
+    selector: 'app-schluesselmomente-project',
+    imports: [ProjectComponent],
+    templateUrl: './schluesselmomente-project.component.html',
+    styleUrl: './schluesselmomente-project.component.css'
 })
 export class SchluesselmomenteProjectComponent {
   ngOnInit() {

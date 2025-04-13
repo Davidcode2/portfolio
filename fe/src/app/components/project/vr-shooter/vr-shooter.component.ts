@@ -4,11 +4,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
-  selector: 'app-vr-shooter',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './vr-shooter.component.html',
-  styleUrl: './vr-shooter.component.css',
+    selector: 'app-vr-shooter',
+    imports: [CommonModule],
+    templateUrl: './vr-shooter.component.html',
+    styleUrl: './vr-shooter.component.css'
 })
 export class VRShooterComponent {
   ngOnInit() {

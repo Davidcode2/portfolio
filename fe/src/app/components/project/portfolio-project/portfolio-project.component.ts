@@ -3,11 +3,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
-  selector: 'app-portfolio-project',
-  standalone: true,
-  imports: [],
-  templateUrl: './portfolio-project.component.html',
-  styleUrl: './portfolio-project.component.css',
+    selector: 'app-portfolio-project',
+    imports: [],
+    templateUrl: './portfolio-project.component.html',
+    styleUrl: './portfolio-project.component.css'
 })
 export class PortfolioProjectComponent implements OnInit {
   ngOnInit() {

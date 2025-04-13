@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-project',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.css'
+    selector: 'app-project',
+    imports: [CommonModule],
+    templateUrl: './project.component.html',
+    styleUrl: './project.component.css'
 })
 export class ProjectComponent {
   @Input() project: any = {};

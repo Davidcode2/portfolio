@@ -4,11 +4,10 @@ import { TextWriterComponent } from '../text-writer/text-writer.component';
 import { WindowButtonsComponent } from '../window-buttons/window-buttons.component';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [CommonModule, TextWriterComponent, WindowButtonsComponent],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+    selector: 'app-hero',
+    imports: [CommonModule, TextWriterComponent, WindowButtonsComponent],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.css'
 })
 export class HeroComponent {
   @ViewChild(TextWriterComponent) textWriter!: TextWriterComponent;

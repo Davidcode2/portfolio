@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-window-buttons',
-  standalone: true,
-  imports: [],
-  templateUrl: './window-buttons.component.html',
-  styleUrl: './window-buttons.component.css',
+    selector: 'app-window-buttons',
+    imports: [],
+    templateUrl: './window-buttons.component.html',
+    styleUrl: './window-buttons.component.css'
 })
 export class WindowButtonsComponent {
   @Input() window!: Element;

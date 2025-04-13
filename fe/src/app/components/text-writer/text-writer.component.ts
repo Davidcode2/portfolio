@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-text-writer',
-  standalone: true,
-  imports: [],
-  templateUrl: './text-writer.component.html',
-  styleUrl: './text-writer.component.css',
+    selector: 'app-text-writer',
+    imports: [],
+    templateUrl: './text-writer.component.html',
+    styleUrl: './text-writer.component.css'
 })
 export class TextWriterComponent {
   private words = ['Always growing', 'Always improving'];

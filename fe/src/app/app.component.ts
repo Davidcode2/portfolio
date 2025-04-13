@@ -16,25 +16,24 @@ import { OdinMemoryComponent } from './components/project/odin-memory/odin-memor
 import { ProjectComponent } from './components/project/project/project.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    HeroComponent,
-    HeaderComponent,
-    HeroContainerComponent,
-    VRShooterComponent,
-    TimelineComponent,
-    SchluesselmomenteProjectComponent,
-    KorrekturhilfeProjectComponent,
-    PortfolioProjectComponent,
-    FooterComponent,
-    OdinMemoryComponent,
-    ProjectComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        HeroComponent,
+        HeaderComponent,
+        HeroContainerComponent,
+        VRShooterComponent,
+        TimelineComponent,
+        SchluesselmomenteProjectComponent,
+        KorrekturhilfeProjectComponent,
+        PortfolioProjectComponent,
+        FooterComponent,
+        OdinMemoryComponent,
+        ProjectComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
